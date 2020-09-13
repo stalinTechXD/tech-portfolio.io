@@ -1,0 +1,440 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.container{
+    padding: 0 100px 0 100px;
+}
+nav ul,
+.main-info-section,
+.work-category{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+body{
+    background: rgb(44, 43, 43)
+    
+}
+header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding:20px 0;
+}
+.navbar{
+    background-color: #181818;
+}
+header h1,
+header a,
+.text p,
+.about h1,
+.skills h1,
+.work h1,
+.conact h1{
+    color: #cff569;
+    font-weight: 900;
+    
+}
+li{
+    list-style: none;
+    margin-left: 30px;
+}
+a{
+    text-decoration: none;
+    font-size: .9rem;
+    text-transform: uppercase;
+    position: relative;
+    top: 50%;
+    bottom: 50%;
+    transform: translateY(-50%);
+}
+.main-info-section{
+    height: cacl(100vh - 81.6px);
+}
+.text{
+    margin-top: 120px;
+}
+.text h1{
+    color: #fff;
+    font-size: 3em;
+    cursor:context-menu;
+}
+.text span{
+    display: inline-block;
+}
+span:hover{
+    color: rgb(37, 247, 9);
+    transition:all .8s;
+    transition: ease-in-out;
+
+}
+span.name{
+    color: #ED5565;
+}
+span.m-left{
+    margin-left: -10px;
+}
+.text p{
+    letter-spacing: 3px;
+    word-spacing: 10px;
+    font-size: .8em;
+}
+.text a{
+    padding: 12px 25px;
+    background-color: none;
+    border: 3px solid #ED5565;
+    color: #ED5565;
+    font-size: .8em;
+    letter-spacing: 2px;
+    position: relative;
+    top: 80px;
+    overflow: hidden;
+    transition: .5s;
+    display: inline-block;
+}
+.text a:hover{
+    color: #fff;
+}
+.text a::before{
+    content: '';
+    background-color: #ED5565;
+    position: absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height: 0%;
+    z-index: -1;
+    transition: .5s;
+}
+.text a:hover::before{
+    height: 100%;
+}
+.profile-image img{
+    width: 450px;
+    margin-top: 50px;
+}
+.about{
+    height: 100vh;
+    margin-top: 100px;
+}
+.about h1,
+.work h1{
+    font-size: 10em;
+    margin-top: 50px;
+    padding:10px;
+    z-index: 0;
+    opacity: 0.5;
+    color: rgb(253, 112, 112);
+}
+.about-me-info{
+    max-width: 900px;
+    background-color:rgb(44, 43, 43);
+    box-shadow: 0 0 0.8em rgba(247, 128, 128, 0.979);
+    padding:50px;
+    position: relative;
+    top:-30px;
+    left:50%;
+    right: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+.about-me-info p{
+    font-size: 1.3em;
+    color: #BEBEBE
+    
+}
+.about-me-info p:nth-child(2),
+.about-me-info p:last-child{
+    margin-top: 30px;
+}
+.about img{
+    width: 600px;
+    position: relative;
+    top: -350px;
+    left: 40px;
+    left:calc(100%-100px);
+    right:calc(100%-100px);
+    transform: translateX(calc(-100% -100px));
+}
+.skills{
+    height:100vh;
+}
+.skills h1,
+.contact h1{
+    text-align: right;
+    font-size: 10em;
+    opacity: .5;
+    color: rgb(253, 112, 112);
+}
+.skills-info{
+    font-size: 1.4em;
+    color: #BEBEBE;
+    max-width: 800px;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    margin-bottom: 50px;
+}
+.html{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+div[class^='tag']{
+    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 0% 50%, 0% 0%);
+    width: 135px;
+    height: 50px;
+    padding: 10px;
+    padding-left: 10px;
+    background-color:rgb(239, 247, 140);
+    font-weight: 900;
+    margin-right: 40px;
+    align-content: center;
+    text-align: center;
+}
+div[class^="tag-"]p{
+    color:#fff;
+    text-align: left;
+    padding-left: 10px;
+    font-size: 1.1em;
+    padding-top: 3px;
+}
+.progressbar{
+    position: relative;
+    width: 600px;
+    height: 20px;
+    border:2px solid rgb(247, 244, 244);
+    border-radius: 20px;
+    margin-top: 7px;
+  animation: animate 1 2s;
+  
+}
+div[class^="bar-"]{
+    position: absolute;
+    background-color: rgb(85, 243, 12);
+    height: 10px;
+    border-radius: 20px;
+    margin: 2.7px;
+}
+.bar-html,
+.bar-css,
+.bar-javascript,
+.bar-react{
+    width:calc(0-6px);
+   
+}
+.work-category button{
+    text-transform: capitalize;
+    border: 3px solid #ED5565;
+    padding: 15px 120px;
+    border-radius: 50px;
+    color:#ED5565;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    background-color: #252627;
+    outline: none;
+    cursor: pointer;
+    
+}
+div[class^="category-"]{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(350px,1fr));
+    grid-gap:20px;
+}
+.work a{
+    justify-self: center;
+    position: relative;
+    display: inline-block;
+}
+.work-category .active{
+    background-color: #ED5565;
+}
+button.active{
+    color:#fff;
+
+}
+.work a img{
+    width: 350px;
+    justify-self: center;
+}
+div.hideCategory{
+    display: none;
+}
+.showCategory{
+    display: block;
+}
+.contact{
+    margin-top:50px
+}
+form input,
+form textarea{
+    display: block;
+    width: 500px;
+    padding:20px;
+    background-color: #252627;
+    border:3px solid #707070;
+    margin:20px 0;
+    outline: none;
+    font-size: 1.2em;
+    color: #fff;
+    position: relative;
+    left:50%;
+    right: 50%;
+    transform: translateX(-50%);
+}
+form input:last-child{
+    width:150px;
+    background-color: #ED5565;
+    border: none;
+    cursor: pointer;
+}
+footer hr{
+    border: 2px solid #707070;
+    margin-top: 80px;
+}
+footer p{
+    text-align: center;
+    color: #f5eded;
+    font-size: 1.2em;
+    padding:30px 0;
+}
+.bar-html{
+    background-color: rgb(255, 0, 0);
+    width:90%;
+    animation-name: km0;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+
+}
+@keyframes km0{
+    to{
+        width:90%;
+    }
+    from{
+        width:0%;
+    }
+}
+
+
+.bar-css{
+    background-color: rgb(255, 0, 0);
+    width:90%;
+    animation-name: km;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+
+}
+@keyframes km{
+    to{
+        width:80%;
+    }
+    from{
+        width:0%;
+    }
+}
+
+.bar-javascript
+{background-color: rgb(255, 0, 0);
+width:90%;
+animation-name: km1;
+animation-duration: 3s;
+animation-timing-function: ease;
+animation-iteration-count: infinite;
+
+}
+@keyframes km1{
+to{
+    width:60%;
+}
+from{
+    width:0%;
+}
+}
+.bar-react{
+    background-color: rgb(255, 0, 0);
+    width:90%;
+    animation-name: km2;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+
+}
+@keyframes km2{
+    to{
+        width:83%;
+    }
+    from{
+        width:0%;
+    }
+}
+.social-menu ul {
+position: absolute;
+top:50%;
+left:50%;
+padding: 0;
+margin: 0;
+transform: translate(-50%, -50%);
+display: flex;
+}
+.social-menu ul li{
+    list-style: none;
+    margin: 0 15px;
+}
+.social-menu ul li .fa{
+    font-size: 30px;
+    line-height: 60px;
+    transition: .6s;
+    color:#ED5565;
+}
+.social-menu ul li .fa:hover{
+    color:#fff;
+}
+.social-menu ul li a{
+    position: relative;
+    display: block;
+    width: 60px;
+    height: 60px;
+    top:6340%;
+    border-radius: 50%;
+    background-color: #fff;
+    text-align: center;
+    align-items: left;
+    transition: .6s;
+    box-shadow: 0 5px 4px rgba(0,0,0,.5);
+    object-fit: cover;
+
+}
+.social-menu ul li a:hover{
+    transform: translate(0,-10px);
+}
+.social-menu ul li:nth-child(1) a:hover{
+    background-color: #3b5999;
+}
+.social-menu ul li:nth-child(2) a:hover{
+    background-color: #3b5999;
+}
+.social-menu ul li:nth-child(3) a:hover{
+    background-color: #3b5999;
+}
+.social-menu ul li:nth-child(4) a:hover{
+    background-color: #3b5999;
+}
+@media screen and (max-width: 800px) {
+    .left, .main, .right {
+      width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+    }
+  }
